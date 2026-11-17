@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>DAULET 49 — Family Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="progress-top" id="progressTop"></div>
+
+<!-- ПАНЕЛЬ ЗВУКА -->
+<div class="sound-panel" id="soundPanel">
+  <button
+    class="sound-toggle"
+    id="soundToggle"
+    type="button"
+    aria-label="Выключить звук"
+    title="Включить или выключить звук"
+  >
+    <span id="soundIcon">♪</span>
+    <span id="soundLabel">SOUND ON</span>
+  </button>
+
+  <div class="volume-wrap">
+    <span class="volume-icon">−</span>
+    <input
+      id="volumeControl"
+      type="range"
+      min="0"
+      max="100"
+      value="45"
+      aria-label="Громкость"
+    >
+    <span class="volume-icon">+</span>
+  </div>
+</div>
+
+<main id="movie">
+
+  <!-- СЦЕНА 1: ВСТУПЛЕНИЕ -->
+  <section class="scene intro active" data-scene="0">
+    <div class="rec"><i></i> REC <span id="clock">00:00:00</span></div>
+
+    <div class="intro-content">
+      <p class="mono lime">FAMILY ARCHIVE • ORIGINAL TAPE</p>
+      <div class="cassette">HOME<span>VIDEO</span></div>
+      <p class="mono intro-date">17 NOVEMBER 2026 — SPECIAL EDITION</p>
+      <h1>ОДНАЖДЫ.<br><em>ДАУЛЕТ.</em></h1>
+      <p class="subtitle">История человека, которого мы называем папой.</p>
+      <button class="primary-btn" id="start">▶ НАЧАТЬ ПРОСМОТР</button>
+      <p class="mono bottom-note">SIDE A • 1977—2026 • MADE WITH LOVE</p>
+    </div>
+
+    <div class="tape-counter">PLAY ▰▰▰▰▰▰▰▰▱▱</div>
+  </section>
+
+  <!-- СЦЕНА 2: ГЛАВНЫЙ ГЕРОЙ -->
+  <section class="scene hero">
+    <div class="scene-number">01 / THE MAIN CHARACTER</div>
+
+    <div class="hero-content">
+      <p class="mono lime">SPECIAL BIRTHDAY EDITION</p>
+      <h2>DAULET<span class="outline">THE LEGEND</span></h2>
+
+      <div class="hero-bottom">
+        <div class="age">49 <small>ЛЕТ</small></div>
+        <p>Некоторые люди делают жизнь особенной.<br>Для нас такой человек — ты.</p>
+      </div>
+
+      <div class="hero-date mono">ONE LIFE • A THOUSAND STORIES</div>
+    </div>
+
+    <div class="hero-mark">49</div>
+  </section>
+
+  <!-- СЦЕНА 3: ФОТОАРХИВ -->
+  <section class="scene archive">
+    <div class="scene-number">02 / OUR FAMILY TAPE</div>
+
+    <div class="archive-heading">
+      <p class="mono lime">PERSONAL FAMILY ARCHIVE</p>
+      <h2>НАША <em>ПЛЁНКА</em></h2>
+      <p>Настоящие кадры. Настоящие воспоминания.</p>
+    </div>
+
+    <div class="photos">
+      <article class="photo-frame">
+        <div class="photo-wrap">
+          <img src="assets/dad1.jpeg" alt="Папа в поле" data-filename="dad1.jpeg">
+          <div class="photo-rec">REC ● 001</div>
+          <div class="photo-missing hidden">
+            <span>PHOTO NOT FOUND</span>
+            <strong>dad1.jpeg</strong>
+          </div>
+        </div>
+        <div class="photo-caption">
+          <span>FRAME 001</span>
+          <h3>ЧЕЛОВЕК, КОТОРЫЙ ВСЕГДА В ДЕЛЕ</h3>
+        </div>
+      </article>
+
+      <article class="photo-frame second-photo">
+        <div class="photo-wrap">
+          <img src="assets/dad2.jpeg" alt="Папа на работе" data-filename="dad2.jpeg">
+          <div class="photo-rec">REC ● 002</div>
+          <div class="photo-missing hidden">
+            <span>PHOTO NOT FOUND</span>
+            <strong>dad2.jpeg</strong>
+          </div>
+        </div>
+        <div class="photo-caption">
+          <span>FRAME 002</span>
+          <h3>ИСТОРИЯ НАСТОЯЩЕГО ТРУДА</h3>
+        </div>
+      </article>
+    </div>
+
+    <p class="mono archive-foot">TWO FRAMES • A THOUSAND MEMORIES</p>
+  </section>
+
+  <!-- СЦЕНА 4: ИСТОРИЯ СЕМЬИ -->
+  <section class="scene memories">
+    <div class="scene-number">03 / THE STORY OF US</div>
+
+    <p class="mono lime">ДАУЛЕТ & АЛТЫНАЙ</p>
+    <h2>ИСТОРИЯ,<br><em>КОТОРАЯ НАС ОБЪЕДИНИЛА</em></h2>
+
+    <p class="story-intro">
+      У каждой семьи есть своя история. В ней есть случайные встречи,
+      важные решения и моменты, которые со временем становятся бесценными.
+    </p>
+
+    <div class="memory-list">
+      <article class="memory">
+        <span>01 / BEGINNING</span>
+        <div>
+          <h3>Всё когда-то начинается</h3>
+          <p>Иногда самый обычный день становится началом чего-то огромного.</p>
+        </div>
+      </article>
+
+      <article class="memory">
+        <span>02 / TOGETHER</span>
+        <div>
+          <h3>Первые воспоминания</h3>
+          <p>Разговоры, улыбки и моменты, которые хочется сохранить навсегда.</p>
+        </div>
+      </article>
+
+      <article class="memory">
+        <span>03 / A PROMISE</span>
+        <div>
+          <h3>Важное решение</h3>
+          <p>Однажды два человека решили идти по жизни вместе.</p>
+        </div>
+      </article>
+
+      <article class="memory">
+        <span>04 / FAMILY</span>
+        <div>
+          <h3>Самое главное — семья</h3>
+          <p>Из двух историй родилась одна общая. И она продолжается до сих пор.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="story-ending mono">SOME MEMORIES ARE BETTER WHEN YOU REMEMBER THEM YOURSELF.</p>
+  </section>
+
+  <!-- СЦЕНА 5: ВИКТОРИНА -->
+  <section class="scene quiz-scene">
+    <div class="scene-number">04 / FAMILY CHALLENGE</div>
+
+    <p class="mono lime">INTERACTIVE VHS GAME</p>
+    <h2>ПАПА, А ТЫ<br><em>ВСЁ ПОМНИШЬ?</em></h2>
+
+    <p class="quiz-description">
+      Пришло время проверить память! Вспомни важные моменты нашей семейной истории.
+      Не торопись — здесь главное не скорость, а воспоминания.
+    </p>
+
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-meta">
+        <span id="questionCount">QUESTION 01 / 09</span>
+        <span>FAMILY QUIZ</span>
+      </div>
+
+      <div class="quiz-progress">
+        <span id="quizProgress"></span>
+      </div>
+
+      <h3 id="question">Загрузка...</h3>
+      <div class="answers" id="answers"></div>
+      <p id="feedback" class="feedback"></p>
+
+      <button id="nextQuestion" class="primary-btn hidden">
+        СЛЕДУЮЩИЙ ВОПРОС →
+      </button>
+    </div>
+
+    <div class="quiz-result hidden" id="quizResult">
+      <p class="mono lime">TAPE COMPLETED</p>
+      <div class="result-number" id="resultNumber">0/9</div>
+      <h3 id="resultTitle"></h3>
+      <p id="resultText"></p>
+      <button class="primary-btn" id="restartQuiz">ПРОЙТИ ЕЩЁ РАЗ ↻</button>
+    </div>
+  </section>
+
+  <!-- СЦЕНА 6: ПОЗДРАВЛЕНИЕ -->
+  <section class="scene ending">
+    <div class="scene-number">05 / THE LAST RECORDING</div>
+
+    <div class="ending-content">
+      <p class="mono lime">A MESSAGE FROM YOUR SON</p>
+      <div class="heart">♥</div>
+
+      <h2>С ДНЁМ<br><em>РОЖДЕНИЯ, ПАПА!</em></h2>
+
+      <div class="letter">
+        <p>Папа, сегодня тебе 49 лет.</p>
+
+        <p>
+          Я хочу сказать тебе спасибо за всё, что ты для меня делаешь.
+          За твою заботу, поддержку, за то, что ты рядом и всегда
+          стараешься для нашей семьи.
+        </p>
+
+        <p>
+          Возможно, я не всегда говорю об этом вслух, но я очень ценю тебя.
+          Я горжусь тем, что ты мой отец, и хочу, чтобы впереди у тебя
+          было ещё много счастливых лет.
+        </p>
+
+        <p>
+          Желаю тебе крепкого здоровья, сил, спокойствия, успехов
+          и исполнения всего, о чём ты мечтаешь.
+        </p>
+
+        <p class="final-words">Я ТЕБЯ ОЧЕНЬ ЛЮБЛЮ, ПАПА. ❤️</p>
+      </div>
+
+      <div class="ending-signature mono">С ЛЮБОВЬЮ — ТВОЙ СЫН</div>
+
+      <button class="finish-btn" id="finishBtn">
+        ЗАВЕРШИТЬ ПРОСМОТР <span>→</span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- НАВИГАЦИЯ -->
+<nav class="movie-controls" id="controls">
+  <span class="scene-counter" id="sceneCounter">01 / 06</span>
+  <button id="continueBtn" class="continue-btn">ПРОДОЛЖИТЬ →</button>
+</nav>
+
+<!-- ПОСЛЕДНИЙ ЭКРАН -->
+<section class="finale-screen" id="finaleScreen">
+  <div class="finale-content">
+    <p class="mono lime finale-top">END OF FAMILY RECORDING</p>
+
+    <div class="finale-line"></div>
+
+    <p class="finale-message">
+      Некоторые записи заканчиваются.<br>
+      Но самые важные воспоминания<br>
+      остаются с нами навсегда.
+    </p>
+
+    <h2>СПАСИБО,<br><em>ПАПА.</em></h2>
+
+    <p class="finale-love">С ДНЁМ РОЖДЕНИЯ. МЫ ТЕБЯ ЛЮБИМ. ❤️</p>
+
+    <div class="finale-stamp">END OF TAPE</div>
+
+    <button id="replayBtn" class="replay-btn">ПЕРЕСМОТРЕТЬ ЗАПИСЬ ↻</button>
+  </div>
+</section>
+
+<div class="transition-flash" id="flash"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
